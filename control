@@ -1,0 +1,9 @@
+Package: com.pizzasdu83.slipperyuikit
+Name: Slippery UIKit
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Description: Shared UI helpers (header/credits) used by the Slippery tweaks.
+Maintainer: SaaS
+Author: SaaS
+Section: Libraries
+Depends: firmware (>= 15.0)
