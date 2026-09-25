@@ -52,8 +52,9 @@ jobs:
         run: |
           VERSION=$(grep '^Version:' control | awk '{print $2}')
           TAG="v$VERSION"
+          gh release delete "$TAG" --repo "${{ github.repository }}" --yes --cleanup-tag || true
           gh release create "$TAG" packages/*.deb \
             --repo "${{ github.repository }}" \
             --title "SlipperyUIKit $VERSION" \
-            --notes "Automated build" \
-            --clobber
+            --notes "Automated build"
+
