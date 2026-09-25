@@ -103,10 +103,6 @@ static const CGFloat kSlipperyTopMargin = 24.0;
     }
 }
 
-@end
-
-@implementation SlipperyPrefsFooterView (Standard)
-
 + (instancetype)standardFooterView {
     return [[self alloc] initWithLinks:[SlipperyLink standardLinks]];
 }
