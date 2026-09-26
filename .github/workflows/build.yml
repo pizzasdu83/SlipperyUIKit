@@ -32,6 +32,18 @@ jobs:
       - name: Prepare Theos
         uses: Randomblock1/theos-action@v1
 
+      - name: Debug — ce que le runner voit vraiment
+        run: |
+          echo "--- pwd / ls -la ---"
+          pwd
+          ls -la
+          echo "--- Makefile (avec numéros de ligne + caractères invisibles) ---"
+          cat -A Makefile
+          echo "--- test -f sur chaque fichier de _FILES ---"
+          for f in SlipperyPrefsHeaderView.m SlipperyPrefsFooterView.m SlipperyLink.m; do
+            if [ -f "$f" ]; then echo "OK: $f"; else echo "MANQUANT: [$f]"; fi
+          done
+
       - name: Build package
         run: |
           rm -f packages/*
