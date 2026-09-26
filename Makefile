@@ -6,6 +6,7 @@ include $(THEOS)/makefiles/common.mk
 
 FRAMEWORK_NAME = SlipperyUIKit
 SlipperyUIKit_FILES = SlipperyPrefsHeaderView.m SlipperyPrefsFooterView.m SlipperyLink.m
+SlipperyUIKit_PUBLIC_HEADERS = SlipperyPrefsHeaderView.h SlipperyPrefsFooterView.h SlipperyLink.h
 SlipperyUIKit_FRAMEWORKS = UIKit
 SlipperyUIKit_PRIVATE_FRAMEWORKS = Preferences
 SlipperyUIKit_CFLAGS = -fobjc-arc -Wno-deprecated-declarations
